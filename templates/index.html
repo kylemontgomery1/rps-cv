@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors</title>
+  <style>
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8  offset-lg-2">
+        <h3 class="mt-5 text-right">Rock, Paper, Scissors Gesture Recgonition</h3>
+        <img src="{{ url_for('video_feed') }}" width="100%" class="center">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
