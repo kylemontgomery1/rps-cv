@@ -10,7 +10,7 @@ cam = cv2.VideoCapture(0)
 
 @app.route('/')
 def index():
-    return render_template('index.html', TITLE='Rock Paper Scissors Detection')
+    return render_template('index.html', user=user)
 
 @app.route("/video_feed")
 def video_feed():
