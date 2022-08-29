@@ -10,7 +10,7 @@ cam = cv2.VideoCapture(0)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return "Hello"
 
 @app.route("/video_feed")
 def video_feed():
