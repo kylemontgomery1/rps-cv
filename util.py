@@ -70,4 +70,3 @@ def gen_frames(cam):
             frame = frame.tobytes()
             yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     cam.release()
-    cv2.destroyAllWindows()
