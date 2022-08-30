@@ -48,8 +48,9 @@ def drawbars(frame, values):
             frame[y0:y1,x0:x1,:] = classimages0[i][:,:,0:3]
 
 #grabs each frame from webcam
-def gen_frames(cam):  
+def gen_frames(): 
     while True:
+        cam = cv2.VideoCapture(0)
         success, frame = cam.read()  # read the camera frame
         if not success:
             break
