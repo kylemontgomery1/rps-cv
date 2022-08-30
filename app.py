@@ -6,7 +6,7 @@ from util import *
 app = Flask(__name__)
 Bootstrap(app)
 
-cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture(-1)
 
 @app.route('/')
 def index():
