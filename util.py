@@ -48,9 +48,8 @@ def drawbars(frame, values):
             frame[y0:y1,x0:x1,:] = classimages0[i][:,:,0:3]
 
 #grabs each frame from webcam
-def gen_frames(): 
+def gen_frames(cam): 
     while True:
-        cam = cv2.VideoCapture(0)
         success, frame = cam.read()  # read the camera frame
         if not success:
             break
@@ -70,3 +69,5 @@ def gen_frames():
             _ , frame = cv2.imencode('.jpg', image)
             frame = frame.tobytes()
             yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+    cam.release()
+    cv2.destroyAllWindows()
